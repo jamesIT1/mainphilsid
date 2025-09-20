@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 // Carousel functionality
 let slideIndex = 0;
 const slides = document.querySelectorAll(".carousel-slide");
@@ -59,6 +60,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     }
 }));
 
+
 // Google Sheet Form Submission
     const googleForm = document.getElementById('contact-google-form');
     
@@ -102,3 +104,4 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
             });
         });
     }
+});
