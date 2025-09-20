@@ -58,3 +58,47 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
         navMenu.classList.remove("active");
     }
 }));
+
+// Google Sheet Form Submission
+    const googleForm = document.getElementById('contact-google-form');
+    
+    if (googleForm) {
+        const statusDiv = document.getElementById('form-status');
+
+        googleForm.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            const submitBtn = googleForm.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1BVIKVz1sXHY99CoFCMvlYlgGJgz-bON5jiiiupGSWbYbbhwJukok1IRfWCgGNVKJ/exec';
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: new FormData(googleForm)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    statusDiv.textContent = 'Thank you! Your message has been sent successfully.';
+                    statusDiv.className = 'success';
+                    googleForm.reset();
+                } else {
+                    throw new Error(data.message || 'An unknown error occurred.');
+                }
+            })
+            .catch(error => {
+                statusDiv.textContent = `An error occurred: ${error.message}`;
+                statusDiv.className = 'error';
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit';
+                setTimeout(() => {
+                    statusDiv.style.display = 'none';
+                    statusDiv.className = '';
+                }, 6000);
+            });
+        });
+    }
