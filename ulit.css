@@ -242,14 +242,14 @@ body {
     width: calc(100% - 100px);
     margin: 40px auto 0 auto;
     overflow: hidden;
-    max-height: 550px;
+    max-height: 1050px;
     border-radius: 16px;
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 550px; /* Explicit height */
+    height: 700px; /* Explicit height */
 }
 
 .carousel-slide {
@@ -272,7 +272,7 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain, cover;
 }
 
 .carousel-text {
