@@ -249,7 +249,7 @@ body {
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 670px; /* Explicit height */
+    height: 700px; /* Explicit height */
 }
 
 .carousel-slide {
@@ -398,179 +398,128 @@ body {
 
 /* Footer Section */
 .footer {
-    background: #f8f9fa;
-    border-top: 1px solid #e5e5e5;
-    padding: 4rem 2rem 2rem 2rem;
+    background-color: #fff; /* Clean white background */
+    color: #555; /* Soft dark text color */
+    padding: 4rem 2rem;
+    border-top: 1px solid #e9ecef; /* Subtle top border */
 }
+
 .footer-container {
     max-width: 1400px;
     margin: 0 auto;
 }
-.footer-content {
+
+.footer-top {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
     margin-bottom: 3rem;
 }
-.footer-navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+
+/* Re-style the logo for the light theme */
+.footer-col .logo-area .logo-text {
+    color: #2c3e50;
 }
-.footer-nav-grid {
-    display: grid;
-    grid-template-columns: 1fr ;
-    gap: 2rem;
+.footer-col .logo-area .logo-sub {
+    color: #7f8c8d;
 }
-.footer-nav-column h4 {
-    font-size: 1.2rem;
+
+.footer-about {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 1rem;
+    line-height: 1.7;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem; /* Slightly smaller heading */
     font-weight: 600;
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px; /* Add some letter spacing */
 }
-.footer-nav-column p {
+
+/* REMOVED the ::after underline */
+
+.footer-col ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.9rem;
-    color: #555;
 }
 
-.footer-social {
-    margin-top: 1rem;
-}
-.footer-social p {
-    font-size: 14px;
-    color: #666;
+.footer-col ul li {
     margin-bottom: 0.75rem;
 }
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #0d6efd; /* Use a standard link blue for hover */
+}
+
+.footer-contact-info p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact-info a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-info a:hover {
+    color: #0d6efd;
+}
+
+.footer-contact-info .fas {
+    color: #0d6efd; /* Make icons a subtle accent color */
+}
+
 .social-icons {
     display: flex;
     gap: 1rem;
+    margin-top: 1.5rem;
 }
+
 .social-icons a {
     width: 40px;
     height: 40px;
-    background: #e5e5e5;
+    background: transparent; /* No background */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #666;
-    transition: all 0.3s ease;
-}
-.social-icons a:hover {
-    background: black;
-    color: white;
-    transform: scale(1.1);
-}
-
-.footer-left-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.footer-info-box {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    
-}
-
-.footer-info-box h2, .footer-info-box.footer-social > p {
+    color: #555; /* Soft icon color */
     font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border: 1px solid #e9ecef; /* Subtle border */
 }
 
-/* Contact Form */
-.footer-contact {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-.contact-form h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 1.5rem;
-}
-.contact-form-fields {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-.form-group.full-width {
-    grid-column: 1 / -1;
-}
-.form-group label {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-.form-group input,
-.form-group select,
-.form-group textarea {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    font-family: inherit;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: gray;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
-}
-.form-group textarea {
-    resize: vertical;
-    min-height: 80px;
-}
-
-.submit-btn {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 0.875rem 2rem;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.submit-btn:hover {
-    background: #555;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.social-icons a:hover {
+    color: #0d6efd; /* Change color on hover */
+    transform: translateY(-2px); /* Simpler hover effect */
+    border-color: #0d6efd;
 }
 
 .footer-copyright {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e9ecef;
 }
+
 .footer-copyright p {
-    font-size: 12px;
-    color: #666;
+    font-size: 0.85rem;
+    color: #6c757d; /* Softer copyright text */
     margin: 0;
 }
 
@@ -604,11 +553,6 @@ body {
         display: flex;
     }
 
-    
-
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
 
     .form-row {
         grid-template-columns: 1fr;
@@ -635,6 +579,27 @@ body {
 
     .carousel-text {
         max-width: 80%;
+    }
+
+    .footer-top {
+        text-align: center;
+    }
+
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-col ul {
+        padding-left: 0;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-contact-info p {
+        justify-content: center;
     }
 }
 
@@ -671,3 +636,6 @@ body {
   background-color: #555;
   transform: scale(1.1);
 }
+
+
+
