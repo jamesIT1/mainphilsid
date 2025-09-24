@@ -30,7 +30,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.85);
+    background: gray;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -408,7 +408,7 @@ body {
 }
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
     align-items: stretch; /* makes both boxes same height */
@@ -594,7 +594,7 @@ body {
     }
 
     .footer-content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 3rem;
     }
 }
@@ -606,11 +606,6 @@ body {
 
     .carousel-text {
         max-width: 80%;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
     }
 
 
