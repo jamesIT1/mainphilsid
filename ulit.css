@@ -30,7 +30,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: gray;
+    background: #2C2B2C;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -66,7 +66,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   font-size: 1.8rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
   letter-spacing: 1px;
   line-height: 1;
 }
@@ -75,14 +75,14 @@ body {
   font-family: 'Segoe UI', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-  color: #7f8c8d;
+  color: #f0f0f0;
   line-height: 1;
   display: inline-block;
 }
 
 .tagline {
    font-size: 2rem;
-   color: black;
+   color: white;
     margin-left: 0.5rem;
     font-family: 'Dancing Script', cursive;
 }
@@ -99,7 +99,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #555;
+    color: white;
     font-weight: 500;
     font-size: 14px;
     display: flex;
@@ -185,9 +185,35 @@ body {
 .hamburger span {
     width: 25px;
     height: 2px;
-    background: #333;
+    background: white;
     transition: all 0.3s ease-in-out;
 }
+
+/* About Us Styling */
+    #aboutUs {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)), url(aboutusbg.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+     
+      
+    }
+
+    #aboutUs h2, #aboutUs p {
+      color: #fff;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    p {
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
 
     /* Section Styling */
     section {
@@ -378,10 +404,11 @@ body {
   transform: translateY(-5px);
 }
 
-.service-icon {
-  font-size: 40px;
-  color: #0d6efd;
-  margin-bottom: 15px;
+.service-box img.service-icon {
+  width: 120px;         /* size of icon */
+  height: 150px;
+  display: block;
+  margin: 0 auto 15px; /* center and add spacing below */
 }
 
 .service-box h3 {
@@ -398,7 +425,7 @@ body {
 
 /* Footer Section */
 .footer {
-    background: #f8f9fa;
+    background:  #2C2B2C;
     border-top: 1px solid #e5e5e5;
     padding: 4rem 2rem 2rem 2rem;
 }
@@ -412,6 +439,7 @@ body {
     gap: 2rem;
     margin-bottom: 3rem;
     align-items: stretch; /* makes both boxes same height */
+    text-align: center;
 }
 .footer-navigation {
     display: flex;
@@ -426,7 +454,7 @@ body {
 .footer-nav-column h4 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #333;
+    color: white;
     margin-bottom: 1rem;
 }
 .footer-nav-column p {
@@ -434,15 +462,15 @@ body {
     padding: 0;
     margin: 0;
     font-size: 0.9rem;
-    color: #555;
+    color: whitesmoke;
 }
 .footer-nav-column p a {
-    color: #555;
+    color: whitesmoke;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 .footer-nav-column p a:hover {
-    color: #0d6efd;
+    color: black;
 }
 .footer-nav-column p i {
     margin-right: 0.5rem;
@@ -456,23 +484,24 @@ body {
 .footer-social h3 {
     font-size: 20px;
     font-weight: 600;
-    color: #333;
+    color: white;
     margin-bottom: 1.5rem;
 }
 .social-icons {
     display: flex;
     gap: 1rem;
     margin-top: 0.5rem;
+    justify-content: center;
 }
 .social-icons a {
     width: 40px;
     height: 40px;
-    background: #e5e5e5;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #666;
+    color: white;
     transition: all 0.3s ease;
 }
 .social-icons a:hover {
@@ -481,16 +510,12 @@ body {
     transform: scale(1.1);
 }
 
-
-
 .footer-info-box {
     background: white;
     border-radius: 8px;
     padding: 1.5rem;
     border: 1px solid #e5e5e5;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    
-    
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
 }
 
 .footer-info-box h2, .footer-info-box.footer-social > p {
@@ -512,12 +537,13 @@ body {
 
 .footer-copyright {
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #e5e5e5;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid whitesmoke;
 }
 .footer-copyright p {
     font-size: 12px;
-    color: #666;
+    color: #36454F;
     margin: 0;
 }
 
@@ -617,21 +643,22 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #333;
-  color: #fff;
+  background-color: whitesmoke; /* Using theme blue */
+  color: black;
   border: none;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Adjusted for icon */
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transition: all 0.4s ease; /* Smoother transition */
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adding shadow */
 }
 
 .scroll-to-top.show {
@@ -641,13 +668,7 @@ body {
 }
 
 .scroll-to-top:hover {
-  background-color: #555;
-  transform: scale(1.1);
+  background-color: gray; /* A slightly darker blue for hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
-
-
-.scroll-to-top:hover {
-  background-color: #555;
-  transform: scale(1.1);
-}
-
