@@ -118,7 +118,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.dropdown:hover .nav-link i {
+.dropdown.active .nav-link i {
     transform: rotate(180deg);
 }
 
@@ -139,7 +139,7 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown.active .dropdown-content {
     display: block;
     opacity: 1;
     visibility: visible;
@@ -592,17 +592,16 @@ body {
         display: flex;
     }
 
-    .nav-item {
-        text-align: center;
-    }
+   
 
     .hamburger {
         display: flex;
     }
 
-    
-
-
+    .nav-menu .nav-link {
+        color: #333;
+        padding-left: 2rem;
+    }
 
     .form-row {
         grid-template-columns: 1fr;
