@@ -81,7 +81,7 @@ body {
 }
 
 .tagline {
-   font-size: 2rem;
+   font-size: 1.7rem;
    color: white;
     margin-left: 0.5rem;
     font-family: 'Dancing Script', cursive;
@@ -536,7 +536,9 @@ body {
 
 
 .footer-copyright {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-top: 1px solid whitesmoke;
