@@ -101,7 +101,7 @@ body {
     text-decoration: none;
     color: white;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -151,7 +151,7 @@ body {
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     color: #555;
-    font-size: 14px;
+    font-size: 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -637,7 +637,79 @@ body {
         max-width: 80%;
     }
 
+    .services-container {
+        gap: 20px;
+    }
 
+    .service-box {
+        width: calc(50% - 10px);
+    }
+
+    .footer-nav-column {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.4rem;
+    }
+
+    .tagline {
+        display: none;
+    }
+
+    .hero-carousel {
+        width: 100%;
+        margin: 80px auto 0 auto;
+        border-radius: 0;
+    }
+
+    .carousel-container {
+        height: 350px;
+    }
+
+    .carousel-text {
+        max-width: 90%;
+        padding: 15px;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    #aboutUs, section {
+        padding: 30px 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .service-box {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .clients img {
+        height: 40px;
+    }
+
+    .footer-content {
+        gap: 2rem;
+    }
 }
 
 
