@@ -227,6 +227,7 @@ body {
     section p {
       max-width: 700px;
       margin: 0 auto 20px;
+      line-height: 1.7;
     }
 
     /* Clients */
