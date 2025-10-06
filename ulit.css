@@ -197,7 +197,7 @@ body {
       background-size: cover;
       background-position: center;
       color: #fff;
-     
+      
       
     }
 
@@ -210,8 +210,10 @@ body {
       text-align: center;
     }
     p {
+    font-size: large;
       max-width: 700px;
       margin: 0 auto 20px;
+      line-height: 1.7;
     }
 
 
@@ -225,10 +227,8 @@ body {
       margin-bottom: 10px;
     }
     section p {
-      font-size: large;
       max-width: 700px;
       margin: 0 auto 20px;
-      line-height: 1.7;
     }
 
     /* Clients */
