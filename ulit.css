@@ -205,9 +205,11 @@ body {
       color: #fff;
     }
     h2 {
-      font-size: 26px;
-      margin-bottom: 10px;
+      font-size: 2.25rem; /* 36px */
+      margin-bottom: 15px; /* More space */
       text-align: center;
+      font-weight: 700; /* Add for more impact */
+      line-height: 1.3; /* Improve readability */
     }
     p {
     font-size: large;
@@ -223,8 +225,9 @@ body {
       text-align: center;
     }
     section h2 {
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
     }
     section p {
       max-width: 700px;
@@ -241,7 +244,7 @@ body {
 
     .clients {
       display: flex;
-      gap: 80px; /* Increased gap for more space between logos */
+      gap: 90px; /* Increased gap for more space between logos */
       align-items: center;
       animation: scroll 80s linear infinite; /* Adjusted duration for duplicated content */
     }
@@ -252,7 +255,7 @@ body {
     }
 
     .clients img {
-      height: 60px;
+      height: 70px; /* Made logos bigger */
       width: auto;
       object-fit: contain;
       mix-blend-mode: multiply;
@@ -267,11 +270,11 @@ body {
 /* Hero Carousel */
 .hero-carousel {
     position: relative;
-    width: calc(100% - 100px);
-    margin: 40px auto 0 auto;
+    width: 100%; /* Make carousel full-width */
+    margin: 0; /* 80px top margin for header, 0 on other sides */
     overflow: hidden;
     max-height: 1050px;
-    border-radius: 16px;
+    border-radius: 0; /* Remove border-radius for full-width */
 }
 
 .carousel-container {
@@ -300,22 +303,31 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain, cover;
+    object-fit: cover; /* Corrected: fill the container */
+}
+
+/* Add a gradient overlay for better text readability and a professional look */
+.carousel-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 50%);
+    z-index: 1;
 }
 
 .carousel-text {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 60px;
+    left: 60px;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 8px;
     max-width: 50%;
-    /* The text animation is now tied to the slide's .active state, which is good */
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease 1s, transform 0.5s ease 1s; /* Delay text fade-in */
+    transition: opacity 0.5s ease 1s, transform 0.5s ease 1s;
+    z-index: 2; /* Ensure text is on top of the overlay */
 }
 
 .carousel-slide.active .carousel-text {
@@ -324,14 +336,17 @@ body {
 }
 
 .carousel-text h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin: 0 0 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
 .carousel-text p {
-    font-size: 1rem;
+    font-size: 1.5rem; /* Make the call to action prominent */
     margin: 0;
+    font-weight: 500;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
 .carousel-prev, .carousel-next {
@@ -342,10 +357,10 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 44px; /* Slightly larger */
+    height: 44px;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 20px;
     z-index: 10;
     opacity: 0;
     transition: opacity 0.3s ease, background-color 0.3s ease;
@@ -365,11 +380,45 @@ body {
 }
 
 .carousel-prev {
-    left: 15px; /* Adjusted for new size */
+    left: 20px;
 }
 
 .carousel-next {
-    right: 15px; /* Adjusted for new size */
+    right: 20px;
+}
+
+/* Ken Burns Effect for a more professional look */
+@keyframes kenburns-top-left {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.1) translate(-2%, -2%);
+  }
+}
+
+@keyframes kenburns-bottom-right {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.1) translate(2%, 2%);
+  }
+}
+
+.carousel-slide.active img {
+  animation-duration: 5s; /* Match the JS slide duration */
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* Alternate the animation direction for variety */
+.carousel-slide:nth-child(odd).active img {
+  animation-name: kenburns-top-left;
+}
+
+.carousel-slide:nth-child(even).active img {
+  animation-name: kenburns-bottom-right;
 }
  /* Services Section */
 .services {
@@ -626,15 +675,29 @@ body {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+
+    h2 {
+        font-size: 2rem; /* 32px */
+    }
+    section h2 {
+        font-size: 2.25rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero-carousel {
-        width: calc(100% - 40px);
-    }
 
     .carousel-text {
         max-width: 80%;
+        left: 40px;
+        bottom: 40px;
+    }
+
+    .carousel-text h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-text p {
+        font-size: 1.2rem;
     }
 
     .services-container {
@@ -651,6 +714,13 @@ body {
 
     .social-icons {
         justify-content: center;
+    }
+
+    h2 {
+        font-size: 1.75rem; /* 28px */
+    }
+    section h2 {
+        font-size: 2rem;
     }
 }
 
@@ -669,7 +739,7 @@ body {
 
     .hero-carousel {
         width: 100%;
-        margin: 80px auto 0 auto;
+        margin: 0; /* Consistent margin */
         border-radius: 0;
     }
 
@@ -679,11 +749,19 @@ body {
 
     .carousel-text {
         max-width: 90%;
-        padding: 15px;
-        bottom: 15px;
+        width: 100%;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
+    }
+
+    .carousel-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-text p {
+        font-size: 1.1rem;
     }
 
     #aboutUs, section {
@@ -691,7 +769,11 @@ body {
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 1.5rem; /* 24px */
+    }
+
+    section h2 {
+        font-size: 1.8rem;
     }
 
     p {
@@ -704,7 +786,12 @@ body {
     }
 
     .clients img {
-        height: 40px;
+        height: 55px; /* Larger logos on mobile */
+    }
+
+    .clients {
+        gap: 60px; /* Adjust gap for larger logos */
+        animation-duration: 40s; /* Slow down animation */
     }
 
     .footer-content {
