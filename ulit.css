@@ -429,14 +429,11 @@ section p {
 .services {
   height: 100vh;
   scroll-snap-align: start;
-  padding: 50px 20px;
+  padding: 100px 20px 30px 20px;
   background: linear-gradient(to right, #f9f9f9, #eaeaea);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   overflow: auto;
+  box-sizing: border-box;
 }
 
 .services-title {
