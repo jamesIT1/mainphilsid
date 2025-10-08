@@ -880,7 +880,7 @@ section p {
 .how-it-works {
   width: 100%;
   padding: 20px 20px 50px;
-  background: #fff;
+  background: linear-gradient(to right, #f9f9f9, #eaeaea);
   text-align: center;
   box-sizing: border-box;
 }
