@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -427,12 +427,13 @@ section p {
 }
  /* Services Section */
 .services {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   scroll-snap-align: start;
   padding: 100px 20px 30px 20px;
   background: linear-gradient(to right, #f9f9f9, #eaeaea);
   text-align: center;
-  overflow: auto;
+  /* overflow: auto; */
   box-sizing: border-box;
 }
 
@@ -757,12 +758,10 @@ section p {
     }
 
     .carousel-text {
-        max-width: 90%;
-        width: 100%;
+        max-width: 80%;
         bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
+        left: 20px;
+        text-align: left;
     }
 
     .carousel-text h2 {
