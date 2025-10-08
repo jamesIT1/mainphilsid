@@ -743,7 +743,7 @@ section p {
     }
 
     .tagline {
-        display: none;
+        font-size: 1.4rem;
     }
 
     .hero-carousel {
