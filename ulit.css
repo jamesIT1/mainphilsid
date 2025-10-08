@@ -871,3 +871,107 @@ section p {
         transform: translateY(0);
     }
 }
+
+/* How It Works Section */
+.how-it-works {
+  padding: 100px 20px 30px 20px;
+  background: #fff;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.how-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 80px; /* More margin to accommodate icons */
+  color: #0d1b2a;
+  text-transform: uppercase;
+}
+
+.how-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; /* Gap between boxes */
+  padding-bottom: 70px;
+}
+
+.how-box {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px 20px 20px 20px;
+  width: 240px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: 1px solid #e0e0e0;
+}
+
+.how-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.how-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  position: absolute;
+  top: -40px; /* Half of the icon height to position it on the border */
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid #fff; /* Creates the white space around the icon */
+}
+
+.how-box h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 20px; /* Space below the icon */
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.how-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for how-it-works */
+@media (max-width: 1300px) {
+    .how-container {
+        gap: 30px;
+    }
+    .how-box {
+        width: 220px;
+    }
+}
+
+@media (max-width: 992px) {
+    .how-title {
+        font-size: 2.3rem;
+    }
+    .how-box {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .how-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+    .how-box {
+        width: 80%;
+        max-width: 350px;
+    }
+    .how-title {
+        font-size: 2.2rem;
+    }
+}
+
