@@ -203,7 +203,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: auto;
 }
 
 #aboutUs h2, #aboutUs p {
@@ -277,7 +276,7 @@ section p {
     position: relative;
     height: 100vh;
     margin: 0; /* 80px top margin for header, 0 on other sides */
-    overflow: auto;
+    overflow: hidden;
     border-radius: 0; /* Remove border-radius for full-width */
     scroll-snap-align: start;
 }
@@ -847,7 +846,6 @@ section p {
 .final-section {
   height: 100vh;
   scroll-snap-align: start;
-  overflow: auto;
   display: flex;
   flex-direction: column;
   background-color: #fff;
