@@ -714,6 +714,10 @@ section p {
         width: calc(50% - 10px);
     }
 
+    .review-image {
+        max-width: 90%;
+    }
+
     .footer-nav-column {
         text-align: center;
     }
@@ -850,11 +854,30 @@ section p {
   padding-right: 0;
 }
 
+
 .clients-wrapper {
     padding: 30px 20px;
     text-align: center;
     flex-shrink: 0;
 }
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.review-image {
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  object-fit: contain;
+  border: 1px solid #ccc;
+}
+
 
 .final-section .footer {
     margin-top: auto;
