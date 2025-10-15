@@ -244,6 +244,8 @@ section p {
     overflow: hidden;
     -webkit-mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
     mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+    background-color: #fff;
+    
 }
 
 .clients {
@@ -251,6 +253,7 @@ section p {
   gap: 90px; /* Increased gap for more space between logos */
   align-items: center;
   animation: scroll 80s linear infinite; /* Adjusted duration for duplicated content */
+  
 }
 
 @keyframes scroll {
@@ -262,7 +265,7 @@ section p {
   height: 70px; /* Made logos bigger */
   width: auto;
   object-fit: contain;
-  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
 }
 
 /* Projects & Reviews section was moved to footer and restyled */
@@ -860,7 +863,7 @@ section p {
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background: linear-gradient(to right, #f9f9f9, #eaeaea);
   padding-left: 0;
   padding-right: 0;
 }
@@ -870,6 +873,10 @@ section p {
     padding: 30px 20px;
     text-align: center;
     flex-shrink: 0;
+}
+
+#clients-wrapper {
+    background-color: #fff;
 }
 
 .reviews-container {
@@ -916,6 +923,7 @@ section p {
   display: block;
   width: 100%;
   scroll-snap-align: start;
+  padding: 0;
 }
 
 /* How It Works Section */
