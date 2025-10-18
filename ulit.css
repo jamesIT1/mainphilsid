@@ -859,7 +859,7 @@ section p {
 
 /* Final Section Styling */
 .final-section {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -901,6 +901,32 @@ section p {
 }
 
 .review-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.project-image {
+  width: 6px;
+  max-width: 30%;
+  min-width: 250px; /* prevents the image from becoming too small */
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  object-fit: cover; /* fills space more naturally */
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
